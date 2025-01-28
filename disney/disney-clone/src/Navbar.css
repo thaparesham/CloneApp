@@ -1,0 +1,217 @@
+/* src/components/Navbar.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  color: #fff;
+  position: relative;
+}
+
+.hamburger {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #000;
+  background: none;
+  border: none;
+  margin-right: 20px; /* Space between hamburger and logo */
+}
+
+.logo {
+  flex: 1; /* Center logo between the hamburger and nav links */
+  text-align: center;
+  font-size: 1.2em;
+  color: #000;
+}
+
+.logo-letter {
+  font-weight: bold;
+  font-size: 2em;
+  color: #ffcc00; /* Color for the letter D */
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none; /* Hide by default */
+  position: fixed; /* Fixed positioning to appear on the left side */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px; /* Width of the vertical menu */
+  background-color: #333;
+  flex-direction: column;
+  transition: transform 0.3s ease; /* Smooth transition for sliding effect */
+  transform: translateX(-100%); /* Hide off-screen to the left */
+}
+
+.nav-links.active {
+  display: flex; /* Show when active */
+  transform: translateX(0); /* Slide in from the left */
+}
+
+.close-button {
+  font-size: 1.5em;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  text-align: center;
+  background-color: #444;
+}
+
+.close-button:hover {
+  background-color: #575757;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  padding: 15px 20px; /* Padding for better click areas */
+  display: block;
+}
+
+.nav-links a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* On larger screens, always show the hamburger and hide the nav items by default */
+@media (min-width: 768px) {
+  .nav-links {
+    display: none; /* Keep hidden on larger screens */
+  }
+
+  .hamburger {
+    display: block; /* Ensure hamburger is visible on larger screens */
+  }
+}
+
+/* Navbar.css */
+
+/* Hamburger menu (left side) */
+.hamburger {
+  font-size: 30px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Logo (center) */
+.logo {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  flex-grow: 1; /* Ensures the logo stays centered */
+}
+
+/* Navigation links */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.nav-links .close-button {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Nav icons (cart and heart) */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns icons to the right */
+}
+
+.nav-icon {
+  font-size: 24px;
+  color: #333;
+  margin-left: 20px; /* Space between the icons */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-icon:hover {
+  color: #f39c12; /* Hover effect for icons */
+}
+
+/* Mobile: Responsive handling of navbar items */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack elements vertically on small screens */
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none; /* Hide nav links by default on mobile */
+    flex-direction: column; /* Stack links vertically */
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show nav links when the menu is active */
+  }
+
+  .nav-icons {
+    justify-content: flex-start; /* Align icons on the left side for mobile */
+    margin-top: 20px;
+  }
+
+  .logo {
+    margin: 10px 0;
+  }
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 5px; /* Adds space between the buttons */
+}
+
+.login-btn,
+.signup-btn {
+  padding: 10px 0px 10px 10px;
+  text-decoration: none;
+  color: #444;
+
+  font-size: 20px;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  color: #f39c12;
+}
+
+/* logo css */
+.logo {
+  font-size: 24px;
+  font-weight: 100;
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo:hover {
+  color: #f39c12;
+}
