@@ -1,7 +1,7 @@
 const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = require("../models/User"); // Assuming you have a User model
+const User = require("../models/User");
 const router = express.Router();
 
 // Login Route (POST request)
@@ -11,7 +11,7 @@ router.post("/login", async (req, res) => {
   // Check if the user exists in the database
   const user = await User.findOne({ userId });
   if (!user) {
-    console.log("Invalid credentials1");
+    console.log("Invalid credentials");
     return res.status(400).json({ message: "Invalid credentials" });
   }
 

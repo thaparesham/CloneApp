@@ -8,7 +8,7 @@ import ItemList from "./ItemList.tsx";
 import ItemDetail from "./ItemDetail.tsx";
 import { CartProvider } from "./CartContext";
 import Login from "./Login";
-import SignUp from "./Signup.tsx";
+import SignUp from "./SignUp.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

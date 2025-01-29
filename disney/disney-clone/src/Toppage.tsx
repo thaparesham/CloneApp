@@ -6,7 +6,7 @@ import topImage from "./images/top_page_image.jpg";
 const TopPage = () => {
   const location = useLocation(); // Get the current location (current route)
 
-  // Only show the image if the current route is NOT "/login"
+  // Only show the top image if the current route is NOT "/login" or "/signup"
 
   const showImage =
     location.pathname !== "/login" && location.pathname !== "/signup";

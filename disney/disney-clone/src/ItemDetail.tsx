@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import "./ItemDetail.css";
 
-// Import images (use your actual image paths)
+// Import images
 import image1 from "./images/item1.jpg";
 import image2 from "./images/item2.jpg";
 import image3 from "./images/item3.jpg";
@@ -106,15 +106,15 @@ const ItemDetail = () => {
         </button>
         <div className="action-tabs">
           <div className="tab">
-            <i className="fas fa-heart"></i> {/* Heart icon for Favourite */}
+            <i className="fas fa-heart"></i>
             <span>お気に入りに追加</span>
           </div>
           <div className="tab">
-            <i className="fas fa-map-marker-alt"></i> {/* Location icon */}
+            <i className="fas fa-map-marker-alt"></i>
             <span>店舗の在庫を確認</span>
           </div>
           <div className="tab">
-            <i className="fas fa-share-alt"></i> {/* Share icon */}
+            <i className="fas fa-share-alt"></i>
             <span>シェアする</span>
           </div>
         </div>

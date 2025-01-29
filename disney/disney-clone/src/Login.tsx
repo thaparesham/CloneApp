@@ -1,11 +1,11 @@
 import { useState } from "react";
-import axios from "axios"; // Import Axios for making HTTP requests
-import "./Login.css"; // You can style the Login page here
+import axios from "axios";
+import "./Login.css";
 
 const Login = () => {
   const [username, setUsername] = useState(""); // User ID state
   const [password, setPassword] = useState(""); // Password state
-  const [error, setError] = useState(""); // To hold error message, if any
+  const [error, setError] = useState(""); // Hold error message, if any
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,9 +26,6 @@ const Login = () => {
       const token = response.data.token;
       localStorage.setItem("token", token); // Store token in localStorage or sessionStorage
       alert("Login successful!");
-
-      // You can redirect the user to another page, e.g., their profile or dashboard
-      // window.location.href = "/dashboard";  // Redirect to dashboard page
     } catch (error: any) {
       // If there's an error (invalid credentials, server error, etc.), display an error message
       setError("Invalid credentials or server error!!");

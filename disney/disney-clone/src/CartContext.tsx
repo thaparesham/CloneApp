@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-// Define the types of the cart item (for TypeScript support)
+// Cart items
 type CartItem = {
   id: number;
   name: string;
